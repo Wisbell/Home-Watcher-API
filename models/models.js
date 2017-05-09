@@ -3,7 +3,7 @@
 const mongoose = require('mongoose')
 
 const Media = mongoose.model('media', mediaSchema)
-const User = mongoose.model('user', mediaSchema)
+const User = mongoose.model('user', userSchema)
 
 const mediaSchema = {
   dateCreated: String,
