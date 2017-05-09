@@ -7,7 +7,10 @@ const mongoose = require('mongoose')
 const routes = require('./routes')
 const app = express()
 
-const MONGODB_URL = 'mongodb://localhost:27017/home-watcher'
+const { user, password } = require('./auth')
+
+// const MONGODB_URL = 'mongodb://localhost:27017/home-watcher'
+const MONGODB_URL = process.env.MONGODB_URL || `mongodb://${user}:${password}@ds137141.mlab.com:37141/home-watcher`
 
 // Allow mongoose to use native promises
 mongoose.Promise = Promise
@@ -21,6 +24,7 @@ app.use('/api/v1', routes)
 
 mongoose.connect(MONGODB_URL)
 .then( () => {
+  console.log('Connected to Mlab')
   app.listen(PORT)
 })
 .catch(console.error)
