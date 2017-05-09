@@ -3,6 +3,9 @@
 const { Router } = require('express')
 const router = Router()
 
+router.use(require('./users'))
+router.use(require('./media'))
+
 router.get('/', (req, res) => {
   res.json({
     "media": "root/api/v1/media",
