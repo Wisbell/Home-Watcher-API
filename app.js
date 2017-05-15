@@ -3,7 +3,7 @@
 const express = require('express')
 const { json } = require('body-parser')
 const mongoose = require('mongoose')
-
+const cors = require('cors')
 const routes = require('./routes')
 const app = express()
 
@@ -17,6 +17,7 @@ mongoose.Promise = Promise
 
 const PORT = process.env.PORT || 8080
 
+app.use(cors())
 app.use(json())
 
 app.use('/api/v1', routes)
