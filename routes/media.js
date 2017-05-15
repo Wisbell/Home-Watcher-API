@@ -4,7 +4,7 @@ const { Router } = require('express')
 const router = Router()
 
 // import functions from media controller
-const { getAllMedia, addMedia} = require('../controllers/mediaCtrl')
+const { getAllMedia, addMedia, deleteMedia } = require('../controllers/mediaCtrl')
 
 // get all media
 router.get('/media/', getAllMedia)
@@ -13,4 +13,6 @@ router.get('/media/', getAllMedia)
 router.post('/media/new', addMedia)
 
 // delete media
+router.delete('/media/deleteMedia/:awsFileName', deleteMedia)
+
 module.exports = router

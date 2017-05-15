@@ -8,7 +8,8 @@ const HTML5_EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\
 const mediaSchema = {
   dateCreated: String,
   mediaType: String,
-  url: String
+  url: String,
+  awsFileName: String
 }
 
 const userSchema = {
