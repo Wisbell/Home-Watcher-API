@@ -7,6 +7,11 @@ const cors = require('cors')
 const routes = require('./routes')
 const app = express()
 
+// User Auth Dependencies
+const session = require('express-session')
+const RedisStore = require('connect-redis')
+const bcrypt = require('bcrypt')
+
 const { user, password } = require('./auth')
 
 // const MONGODB_URL = 'mongodb://localhost:27017/home-watcher'
