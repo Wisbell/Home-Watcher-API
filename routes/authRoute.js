@@ -4,7 +4,7 @@ const { Router } = require('express')
 const router = Router()
 
 // import functions from auth controller
-const { loginUser, registerUser} = require('../controllers/AuthCtrl')
+const { loginUser, registerUser} = require('../controllers/authCtrl')
 
 // login
 router.post('/login', loginUser)

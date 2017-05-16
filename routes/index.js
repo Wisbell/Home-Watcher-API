@@ -5,6 +5,7 @@ const router = Router()
 
 router.use(require('./users'))
 router.use(require('./media'))
+router.use(require('./authRoute'))
 
 router.get('/', (req, res) => {
   res.json({
