@@ -16,6 +16,7 @@ router.get('/users/:id', getUser)
 router.post('/users/new', addUser)
 
 // delete a user
+// implement later
 
 
 module.exports = router
