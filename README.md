@@ -9,7 +9,7 @@ To see other parts of this project [click here](https://github.com/Wisbell/Home-
 
 ## Technologies
 
-ExpressJS
-NodeJS
-MongoDB
+ExpressJS,
+NodeJS,
+MongoDB,
 Mongoose
